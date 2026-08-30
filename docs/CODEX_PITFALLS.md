@@ -6,7 +6,7 @@
 - World 不是 RE Engine。REFramework / Wilds 动作树不能用。
 - LuaEngine 不在开荒 QoL 清单里。Stracker 只加载 nativePC，脚本还要 LuaEngine。
 - 风灵月影和动作 hook 抢内存。测太刀时必须关。
-- 当前 Mac 工作区 PATH 中无 `lua` / `luajit`（`command -v lua` 失败）。在安装解释器前不得把 `lua lua/spec_harness.lua` 写成已通过。
+- 当前 Mac 工作区 PATH 有 `/opt/homebrew/bin/lua`（Lua 5.5.1）。`lua lua/spec_harness.lua` 与 `lua lua/dump_probe.lua` 可跑。dump_probe 在 stub 下打印 `weapon_type` nil、`action_id` nil、`spirit_level` 0、`A.ID` 全 0、`force_action` false；这不是 Windows 游戏 dump，不得写成已对接。
 
 ## 待验证候选
 
